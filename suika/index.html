@@ -3,11 +3,32 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>suika</title>
+    <style>
+#bg-layer {
+  position: fixed;
+  top: 0; left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: url("image/bg_pattern.png");
+  background-size: cover;
+  opacity: 0.3; /* 원하는 투명도 */
+  z-index: 0;
+}
+
+#game-container canvas {
+  position: relative;
+  z-index: 1;
+}
+      </style>
 </head>
 <body>
-    수박게임
-    <script src="/suika/Scripts/matter.js"></script>
-    <script type="module" src="/suika/Scripts/main.js"></script>
+    <script src="/suika/scripts/matter.js"></script>
+    <script type="module" src="/suika/scripts/main.js"></script>
+    <script type="module" src="/suika/scripts/fruits.js"></script>
 </body>
+<body>
+    <div id="bg-layer"></div>
+    <div id="game-container"></div>
+  </body>
 </html>
